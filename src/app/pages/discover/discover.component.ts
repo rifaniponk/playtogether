@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MockDataService } from '../../services/mock-data.service';
 import { Event, SportType } from '../../models/event.model';
 import { EventCardComponent } from '../../components/event-card/event-card.component';
 
 @Component({
   selector: 'app-discover',
-  imports: [CommonModule, FormsModule, EventCardComponent],
+  imports: [CommonModule, FormsModule, RouterModule, EventCardComponent],
   templateUrl: './discover.component.html',
   styleUrl: './discover.component.css'
 })
