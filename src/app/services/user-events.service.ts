@@ -7,11 +7,24 @@ import { MockDataService } from './mock-data.service';
   providedIn: 'root'
 })
 export class UserEventsService {
+  private readonly STORAGE_KEY = 'playtogether_joined_events';
   private joinedEventIds = new BehaviorSubject<string[]>([]);
   
   constructor(private mockDataService: MockDataService) {
-    // Add some sample joined events for demo
-    this.joinedEventIds.next(['1', '4', '7', '18', '22']);
+    // Load from localStorage or use sample data for demo
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    if (stored) {
+      try {
+        const parsedIds = JSON.parse(stored);
+        this.joinedEventIds.next(parsedIds);
+      } catch (e) {
+      }
+    } 
+  }
+
+
+  private saveToStorage(ids: string[]): void {
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(ids));
   }
 
   getJoinedEvents(): Event[] {
@@ -23,13 +36,17 @@ export class UserEventsService {
   addJoinedEvent(eventId: string): void {
     const currentIds = this.joinedEventIds.value;
     if (!currentIds.includes(eventId)) {
-      this.joinedEventIds.next([...currentIds, eventId]);
+      const newIds = [...currentIds, eventId];
+      this.joinedEventIds.next(newIds);
+      this.saveToStorage(newIds);
     }
   }
 
   removeJoinedEvent(eventId: string): void {
     const currentIds = this.joinedEventIds.value;
-    this.joinedEventIds.next(currentIds.filter(id => id !== eventId));
+    const newIds = currentIds.filter(id => id !== eventId);
+    this.joinedEventIds.next(newIds);
+    this.saveToStorage(newIds);
   }
 
   isEventJoined(eventId: string): boolean {
@@ -38,6 +55,11 @@ export class UserEventsService {
 
   getJoinedEventIds(): Observable<string[]> {
     return this.joinedEventIds.asObservable();
+  }
+
+  clearAllJoinedEvents(): void {
+    this.joinedEventIds.next([]);
+    localStorage.removeItem(this.STORAGE_KEY);
   }
 }
 
