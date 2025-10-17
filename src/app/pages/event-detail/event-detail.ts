@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MockDataService } from '../../services/mock-data.service';
+import { UserEventsService } from '../../services/user-events.service';
 import { Event } from '../../models/event.model';
 
 @Component({
@@ -28,7 +29,8 @@ export class EventDetail implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private mockDataService: MockDataService
+    private mockDataService: MockDataService,
+    private userEventsService: UserEventsService
   ) {}
 
   ngOnInit() {
@@ -36,6 +38,11 @@ export class EventDetail implements OnInit {
     if (eventId) {
       const allEvents = this.mockDataService.getEvents();
       this.event = allEvents.find(e => e.id === eventId);
+      
+      // Check if user has already joined this event
+      if (this.event) {
+        this.hasJoined = this.userEventsService.isEventJoined(this.event.id);
+      }
     }
   }
 
@@ -102,6 +109,10 @@ export class EventDetail implements OnInit {
     // Simulate joining the event
     this.event.currentParticipants += 1;
     this.hasJoined = true;
+    
+    // Add to user's joined events
+    this.userEventsService.addJoinedEvent(this.event.id);
+    
     this.showSuccessModal = true;
 
     // Auto-close success modal after 2 seconds
