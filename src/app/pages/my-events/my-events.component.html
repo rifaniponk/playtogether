@@ -5,7 +5,10 @@
       <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
         My Events
       </h1>
-      <p class="text-sm text-gray-600 mt-1">{{ myEvents.length }} event{{ myEvents.length !== 1 ? 's' : '' }} joined</p>
+      <div class="flex items-center gap-1.5 mt-1">
+        <ng-icon name="heroCalendar" size="16" class="text-gray-600"></ng-icon>
+        <p class="text-sm text-gray-600">{{ myEvents.length }} event{{ myEvents.length !== 1 ? 's' : '' }} joined</p>
+      </div>
     </div>
   </div>
 
@@ -13,7 +16,11 @@
   <div class="max-w-7xl mx-auto px-3 py-4">
     <!-- Empty State -->
     <div *ngIf="myEvents.length === 0" class="bg-white rounded-2xl shadow-lg p-8 text-center">
-      <div class="text-6xl mb-4">📅</div>
+      <div class="flex justify-center mb-4">
+        <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+          <ng-icon name="heroCalendar" size="40" class="text-blue-600"></ng-icon>
+        </div>
+      </div>
       <h2 class="text-xl font-bold text-gray-800 mb-2">No Events Yet</h2>
       <p class="text-gray-600 mb-6">Events you join will appear here</p>
       <a 
@@ -48,34 +55,34 @@
             <!-- Event Info -->
             <div class="flex-1 p-3">
               <div class="flex items-start justify-between mb-2">
-                <div class="flex-1">
-                  <h3 class="text-base font-bold text-gray-800 mb-1 line-clamp-1">{{ event.title }}</h3>
-                  <div class="flex items-center gap-2 text-xs text-gray-600 mb-1">
-                    <span>📅 {{ formatDate(event.date) }}</span>
-                    <span>•</span>
-                    <span>⏰ {{ event.time }}</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-xs text-gray-600">
-                    <span>📍 {{ event.location }}</span>
-                  </div>
+                <h3 class="text-base font-bold text-gray-800 line-clamp-1 flex-1">{{ event.title }}</h3>
+                <span [class]="getSkillLevelColor(event.skillLevel)" 
+                      class="px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ml-2">
+                  {{ event.skillLevel }}
+                </span>
+              </div>
+              
+              <div class="space-y-1 mb-2">
+                <div class="flex items-center gap-1.5 text-xs text-gray-600">
+                  <ng-icon name="heroCalendar" size="14" class="flex-shrink-0"></ng-icon>
+                  <span>{{ formatDate(event.date) }}</span>
+                  <span class="mx-1">•</span>
+                  <ng-icon name="heroClock" size="14" class="flex-shrink-0"></ng-icon>
+                  <span>{{ event.time }}</span>
                 </div>
-                <div class="flex flex-col items-end gap-1 ml-2">
-                  <span [class]="getSkillLevelColor(event.skillLevel)" 
-                        class="px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap">
-                    {{ event.skillLevel }}
-                  </span>
-                  <span class="text-sm font-bold" 
-                        [class.text-green-600]="event.price === 0" 
-                        [class.text-gray-800]="event.price > 0">
-                    {{ formatPrice(event.price) }}
-                  </span>
+                <div class="flex items-center gap-1.5 text-xs text-gray-600">
+                  <ng-icon name="heroMapPin" size="14" class="flex-shrink-0"></ng-icon>
+                  <span class="line-clamp-1">{{ event.location }}</span>
                 </div>
               </div>
 
               <!-- Progress bar -->
               <div class="mt-2">
-                <div class="flex justify-between text-xs mb-1">
-                  <span class="text-gray-600">{{ event.currentParticipants }}/{{ event.maxParticipants }} joined</span>
+                <div class="flex items-center justify-between text-xs mb-1">
+                  <div class="flex items-center gap-1">
+                    <ng-icon name="heroUsers" size="14"></ng-icon>
+                    <span class="text-gray-600">{{ event.currentParticipants }}/{{ event.maxParticipants }} joined</span>
+                  </div>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-1.5 overflow-hidden">
                   <div 
@@ -118,21 +125,23 @@
             <!-- Event Info -->
             <div class="flex-1 p-3">
               <div class="flex items-start justify-between mb-2">
-                <div class="flex-1">
-                  <h3 class="text-base font-bold text-gray-600 mb-1 line-clamp-1">{{ event.title }}</h3>
-                  <div class="flex items-center gap-2 text-xs text-gray-500 mb-1">
-                    <span>📅 {{ formatDate(event.date) }}</span>
-                    <span>•</span>
-                    <span>⏰ {{ event.time }}</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-xs text-gray-500">
-                    <span>📍 {{ event.location }}</span>
-                  </div>
+                <h3 class="text-base font-bold text-gray-600 line-clamp-1 flex-1">{{ event.title }}</h3>
+                <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ml-2">
+                  {{ event.skillLevel }}
+                </span>
+              </div>
+              
+              <div class="space-y-1">
+                <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                  <ng-icon name="heroCalendar" size="14" class="flex-shrink-0"></ng-icon>
+                  <span>{{ formatDate(event.date) }}</span>
+                  <span class="mx-1">•</span>
+                  <ng-icon name="heroClock" size="14" class="flex-shrink-0"></ng-icon>
+                  <span>{{ event.time }}</span>
                 </div>
-                <div class="flex flex-col items-end gap-1 ml-2">
-                  <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap">
-                    {{ event.skillLevel }}
-                  </span>
+                <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                  <ng-icon name="heroMapPin" size="14" class="flex-shrink-0"></ng-icon>
+                  <span class="line-clamp-1">{{ event.location }}</span>
                 </div>
               </div>
             </div>

@@ -3,11 +3,24 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Event } from '../../models/event.model';
 import { UserEventsService } from '../../services/user-events.service';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { 
+  heroCalendar,
+  heroClock,
+  heroMapPin,
+  heroUsers
+} from '@ng-icons/heroicons/outline';
 
 @Component({
   selector: 'app-my-events',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgIconComponent],
+  viewProviders: [provideIcons({ 
+    heroCalendar,
+    heroClock,
+    heroMapPin,
+    heroUsers
+  })],
   templateUrl: './my-events.component.html',
   styleUrl: './my-events.component.css'
 })
