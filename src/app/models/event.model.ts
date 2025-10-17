@@ -15,6 +15,7 @@ export interface Event {
   description: string;
   image: string;
   distance?: string;
+  bannerImage?: string;
 }
 
 export interface SportType {

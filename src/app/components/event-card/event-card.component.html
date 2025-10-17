@@ -1,7 +1,14 @@
 <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-gray-100">
   <!-- Event Image/Icon Header -->
-  <div class="relative bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 h-32 flex items-center justify-center">
-    <div class="text-5xl">{{ event.image }}</div>
+  <div class="relative h-32 flex items-center justify-center" 
+       [ngClass]="event.bannerImage ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400'">
+    <!-- Banner Image -->
+    <img *ngIf="event.bannerImage" 
+         [src]="event.bannerImage" 
+         [alt]="event.title"
+         class="w-full h-full object-cover opacity-80">
+    <!-- Emoji fallback -->
+    <div *ngIf="!event.bannerImage" class="text-5xl">{{ event.image }}</div>
     
     <!-- Sport Badge -->
     <div class="absolute top-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full text-xs font-semibold flex items-center gap-1 shadow-sm">

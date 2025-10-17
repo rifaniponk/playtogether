@@ -24,7 +24,8 @@ export class MockDataService {
       hostAvatar: '👨',
       description: 'Friendly badminton session for intermediate players. All equipment provided!',
       image: '🏸',
-      distance: '1.4 mi'
+      distance: '1.4 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&h=400&fit=crop'
     },
     {
       id: '2',
@@ -42,7 +43,8 @@ export class MockDataService {
       hostAvatar: '👩',
       description: 'Competitive singles practice',
       image: '🏸',
-      distance: '7.0 mi'
+      distance: '7.0 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?w=800&h=400&fit=crop'
     },
     {
       id: '3',
@@ -80,7 +82,8 @@ export class MockDataService {
       hostAvatar: '👩‍🦰',
       description: 'Join us for a beautiful sunset hike! Perfect for beginners.',
       image: '⛰️',
-      distance: '9.8 mi'
+      distance: '9.8 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&h=400&fit=crop'
     },
     {
       id: '5',
@@ -98,7 +101,8 @@ export class MockDataService {
       hostAvatar: '🧗',
       description: 'Full day hiking adventure',
       image: '⛰️',
-      distance: '11.5 mi'
+      distance: '11.5 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=400&fit=crop'
     },
     {
       id: '6',
@@ -116,7 +120,8 @@ export class MockDataService {
       hostAvatar: '🌳',
       description: 'Relaxed morning nature walk',
       image: '🥾',
-      distance: '5.8 mi'
+      distance: '5.8 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=400&fit=crop'
     },
 
     // Basketball Events
@@ -136,7 +141,8 @@ export class MockDataService {
       hostAvatar: '🏀',
       description: 'Casual 5v5 basketball game. Almost full!',
       image: '🏀',
-      distance: '5.3 mi'
+      distance: '5.3 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=400&fit=crop'
     },
     {
       id: '8',
@@ -154,7 +160,8 @@ export class MockDataService {
       hostAvatar: '⛹️',
       description: 'Fast-paced 3v3 tournament',
       image: '🏀',
-      distance: '2.6 mi'
+      distance: '2.6 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=800&h=400&fit=crop'
     },
     {
       id: '9',
@@ -192,7 +199,8 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Professional tennis practice session',
       image: '🎾',
-      distance: '2.9 mi'
+      distance: '2.9 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&h=400&fit=crop'
     },
     {
       id: '11',
@@ -210,7 +218,8 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Friendly doubles matches',
       image: '🎾',
-      distance: '6.3 mi'
+      distance: '6.3 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=800&h=400&fit=crop'
     },
     {
       id: '12',
@@ -248,7 +257,8 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Competitive padel tournament. Advanced players only!',
       image: '🎾',
-      distance: '3.2 mi'
+      distance: '3.2 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&h=400&fit=crop'
     },
     {
       id: '14',
@@ -286,7 +296,8 @@ export class MockDataService {
       hostAvatar: '🏐',
       description: 'Fun beach volleyball for everyone!',
       image: '🏐',
-      distance: '7.7 mi'
+      distance: '7.7 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&h=400&fit=crop'
     },
     {
       id: '16',
@@ -304,7 +315,8 @@ export class MockDataService {
       hostAvatar: '🏐',
       description: 'Competitive indoor volleyball',
       image: '🏐',
-      distance: '6.1 mi'
+      distance: '6.1 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&h=400&fit=crop'
     },
     {
       id: '17',
@@ -342,7 +354,8 @@ export class MockDataService {
       hostAvatar: '🏃',
       description: 'Weekly morning run, 3-mile route. Free!',
       image: '🏃',
-      distance: '3.9 mi'
+      distance: '3.9 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=400&fit=crop'
     },
     {
       id: '19',
@@ -360,7 +373,8 @@ export class MockDataService {
       hostAvatar: '🏃',
       description: 'Fundraising 10K run',
       image: '🏃',
-      distance: '2.2 mi'
+      distance: '2.2 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=800&h=400&fit=crop'
     },
     {
       id: '20',
@@ -378,7 +392,8 @@ export class MockDataService {
       hostAvatar: '🏃‍♂️',
       description: '9-mile trail running',
       image: '🏃',
-      distance: '13.8 mi'
+      distance: '13.8 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=800&h=400&fit=crop'
     },
     {
       id: '21',
@@ -416,7 +431,8 @@ export class MockDataService {
       hostAvatar: '🧘',
       description: 'Free outdoor yoga session. Bring your own mat!',
       image: '🧘',
-      distance: '0.8 mi'
+      distance: '0.8 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=400&fit=crop'
     },
     {
       id: '23',
@@ -434,7 +450,8 @@ export class MockDataService {
       hostAvatar: '🧘‍♀️',
       description: 'Intense power yoga workout',
       image: '🧘',
-      distance: '3.0 mi'
+      distance: '3.0 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=400&fit=crop'
     },
     {
       id: '24',
@@ -452,7 +469,8 @@ export class MockDataService {
       hostAvatar: '🧘',
       description: 'Relaxing yoga with ocean view',
       image: '🧘',
-      distance: '7.4 mi'
+      distance: '7.4 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&h=400&fit=crop'
     },
     {
       id: '25',
@@ -490,7 +508,8 @@ export class MockDataService {
       hostAvatar: '⚽',
       description: '5v5 indoor soccer match',
       image: '⚽',
-      distance: '3.6 mi'
+      distance: '3.6 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=400&fit=crop'
     },
     {
       id: '27',
@@ -508,7 +527,8 @@ export class MockDataService {
       hostAvatar: '⚽',
       description: 'Casual 11v11 football',
       image: '⚽',
-      distance: '5.2 mi'
+      distance: '5.2 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=800&h=400&fit=crop'
     },
     {
       id: '28',
@@ -546,7 +566,8 @@ export class MockDataService {
       hostAvatar: '🚴',
       description: '18-mile leisure cycling',
       image: '🚴',
-      distance: '10.2 mi'
+      distance: '10.2 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=800&h=400&fit=crop'
     },
     {
       id: '30',
@@ -564,7 +585,8 @@ export class MockDataService {
       hostAvatar: '🚵',
       description: 'Challenging mountain bike trail',
       image: '🚴',
-      distance: '13.4 mi'
+      distance: '13.4 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=800&h=400&fit=crop'
     },
     {
       id: '31',
@@ -582,7 +604,8 @@ export class MockDataService {
       hostAvatar: '🚴‍♂️',
       description: 'Free night cycling tour',
       image: '🚴',
-      distance: '2.6 mi'
+      distance: '2.6 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=400&fit=crop'
     },
 
     // Swimming Events
@@ -602,7 +625,8 @@ export class MockDataService {
       hostAvatar: '🏊',
       description: 'Open lane swimming session',
       image: '🏊',
-      distance: '3.1 mi'
+      distance: '3.1 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=800&h=400&fit=crop'
     },
     {
       id: '33',
@@ -620,7 +644,8 @@ export class MockDataService {
       hostAvatar: '🏊‍♂️',
       description: 'Learn to swim basics',
       image: '🏊',
-      distance: '5.7 mi'
+      distance: '5.7 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&h=400&fit=crop'
     },
     {
       id: '34',
@@ -658,7 +683,8 @@ export class MockDataService {
       hostAvatar: '🥊',
       description: 'High intensity boxing workout',
       image: '🥊',
-      distance: '3.8 mi'
+      distance: '3.8 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=400&fit=crop'
     },
     {
       id: '36',
@@ -676,7 +702,8 @@ export class MockDataService {
       hostAvatar: '🥋',
       description: 'Introduction to Muay Thai',
       image: '🥊',
-      distance: '3.4 mi'
+      distance: '3.4 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=800&h=400&fit=crop'
     },
     {
       id: '37',
@@ -714,7 +741,8 @@ export class MockDataService {
       hostAvatar: '💼',
       description: 'Quick badminton during lunch',
       image: '🏸',
-      distance: '2.4 mi'
+      distance: '2.4 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&h=400&fit=crop'
     },
     {
       id: '39',
@@ -752,7 +780,8 @@ export class MockDataService {
       hostAvatar: '🏫',
       description: 'Training camp for youth 10-16',
       image: '🏀',
-      distance: '3.2 mi'
+      distance: '3.2 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?w=800&h=400&fit=crop'
     },
     {
       id: '41',
@@ -770,7 +799,8 @@ export class MockDataService {
       hostAvatar: '👩‍🦰',
       description: 'Women\'s basketball matches',
       image: '🏀',
-      distance: '8.2 mi'
+      distance: '8.2 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1515523110800-9415d13b84a8?w=800&h=400&fit=crop'
     },
 
     // Table Tennis
@@ -866,7 +896,8 @@ export class MockDataService {
       hostAvatar: '🧗',
       description: 'Beginner-friendly climbing',
       image: '🧗',
-      distance: '4.5 mi'
+      distance: '4.5 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&h=400&fit=crop'
     },
     {
       id: '47',
@@ -884,7 +915,8 @@ export class MockDataService {
       hostAvatar: '🧗‍♂️',
       description: 'Challenging boulder problems',
       image: '🧗',
-      distance: '4.3 mi'
+      distance: '4.3 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop'
     },
 
     // More Yoga
@@ -904,7 +936,8 @@ export class MockDataService {
       hostAvatar: '🎪',
       description: 'Yoga with hammocks',
       image: '🧘',
-      distance: '3.6 mi'
+      distance: '3.6 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&h=400&fit=crop'
     },
     {
       id: '49',
@@ -942,7 +975,8 @@ export class MockDataService {
       hostAvatar: '💃',
       description: 'High energy dance workout',
       image: '💃',
-      distance: '4.9 mi'
+      distance: '4.9 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&h=400&fit=crop'
     },
     {
       id: '51',
@@ -960,7 +994,8 @@ export class MockDataService {
       hostAvatar: '🕺',
       description: 'Learn hip hop choreography',
       image: '💃',
-      distance: '3.2 mi'
+      distance: '3.2 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&h=400&fit=crop'
     },
 
     // CrossFit / HIIT
@@ -980,7 +1015,8 @@ export class MockDataService {
       hostAvatar: '💪',
       description: 'Intense CrossFit WOD',
       image: '💪',
-      distance: '3.9 mi'
+      distance: '3.9 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop'
     },
     {
       id: '53',
@@ -998,7 +1034,8 @@ export class MockDataService {
       hostAvatar: '🏋️',
       description: '45-min high intensity workout',
       image: '💪',
-      distance: '7.4 mi'
+      distance: '7.4 mi',
+      bannerImage: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&h=400&fit=crop'
     }
   ];
 
