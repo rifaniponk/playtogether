@@ -199,6 +199,143 @@
   </div>
 </div>
 
+<!-- Payment Modal (Stripe-like) -->
+<div *ngIf="showPaymentModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 transform transition-all">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h3 class="text-xl font-bold text-gray-800">Complete Payment</h3>
+        <p class="text-sm text-gray-600">Powered by Stripe (Demo)</p>
+      </div>
+      <button (click)="closePaymentModal()" class="text-gray-400 hover:text-gray-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Event Info -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-xl mb-6">
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="text-sm text-gray-600">{{ event?.title }}</p>
+          <p class="text-xs text-gray-500 mt-1">{{ event?.date }} • {{ event?.time }}</p>
+        </div>
+        <div class="text-right">
+          <p class="text-2xl font-bold text-gray-800">${{ event?.price?.toFixed(2) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Form -->
+    <form class="space-y-4">
+      <!-- Card Number -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Card Number</label>
+        <div class="relative">
+          <input
+            type="text"
+            [(ngModel)]="cardNumber"
+            (input)="formatCardNumber($event)"
+            name="cardNumber"
+            placeholder="1234 5678 9012 3456"
+            maxlength="19"
+            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-all duration-300 font-mono text-lg"
+            [class.border-red-300]="isCardNumberPartial()"
+            [class.border-green-400]="isCardNumberValid()">
+          <div class="absolute right-3 top-1/2 transform -translate-y-1/2 flex gap-1">
+            <svg class="w-8 h-5" viewBox="0 0 48 32" fill="none">
+              <rect width="48" height="32" rx="4" fill="#1434CB"/>
+              <circle cx="18" cy="16" r="8" fill="#EB001B"/>
+              <circle cx="30" cy="16" r="8" fill="#F79E1B"/>
+              <path d="M24 10.5C21.5 12.5 21.5 15.5 24 17.5C26.5 15.5 26.5 12.5 24 10.5Z" fill="#FF5F00"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expiry & CVC -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Expiry Date</label>
+          <input
+            type="text"
+            [(ngModel)]="expiryDate"
+            (input)="formatExpiryDate($event)"
+            name="expiryDate"
+            placeholder="MM/YY"
+            maxlength="5"
+            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-all duration-300 font-mono text-lg"
+            [class.border-red-300]="expiryDate && expiryDate.length < 5"
+            [class.border-green-400]="expiryDate.length === 5">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">CVC</label>
+          <input
+            type="text"
+            [(ngModel)]="cvc"
+            (input)="formatCVC($event)"
+            name="cvc"
+            placeholder="123"
+            maxlength="3"
+            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-all duration-300 font-mono text-lg"
+            [class.border-red-300]="cvc && cvc.length < 3"
+            [class.border-green-400]="cvc.length === 3">
+        </div>
+      </div>
+
+      <!-- Cardholder Name -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Cardholder Name</label>
+        <input
+          type="text"
+          [(ngModel)]="cardholderName"
+          name="cardholderName"
+          placeholder="JOHN DOE"
+          class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-all duration-300 uppercase text-lg"
+          [class.border-green-400]="cardholderName.trim().length > 0">
+      </div>
+
+      <!-- Security Notice -->
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 flex items-start gap-2">
+        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd" />
+        </svg>
+        <div>
+          <p class="text-xs font-semibold text-blue-900">Secure Payment</p>
+          <p class="text-xs text-blue-700 mt-0.5">Your payment information is encrypted and secure. This is a demo - no real charges will be made.</p>
+        </div>
+      </div>
+
+      <!-- Pay Button -->
+      <button
+        type="button"
+        (click)="processPayment()"
+        [disabled]="!isPaymentFormValid() || isProcessingPayment"
+        [class.opacity-50]="!isPaymentFormValid() || isProcessingPayment"
+        [class.cursor-not-allowed]="!isPaymentFormValid() || isProcessingPayment"
+        class="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 disabled:transform-none disabled:hover:shadow-none flex items-center justify-center gap-2">
+        <svg *ngIf="isProcessingPayment" class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span *ngIf="!isProcessingPayment">Pay ${{ event?.price?.toFixed(2) }}</span>
+        <span *ngIf="isProcessingPayment">Processing...</span>
+      </button>
+
+      <!-- Cancel -->
+      <button
+        type="button"
+        (click)="closePaymentModal()"
+        [disabled]="isProcessingPayment"
+        class="w-full py-3 text-gray-600 hover:text-gray-800 font-semibold transition-all duration-300">
+        Cancel
+      </button>
+    </form>
+  </div>
+</div>
+
 <!-- Success Modal -->
 <div *ngIf="showSuccessModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
   <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform transition-all text-center">

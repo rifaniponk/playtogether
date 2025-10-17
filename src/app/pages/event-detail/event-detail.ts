@@ -1,20 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MockDataService } from '../../services/mock-data.service';
 import { Event } from '../../models/event.model';
 
 @Component({
   selector: 'app-event-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './event-detail.html',
   styleUrl: './event-detail.css'
 })
 export class EventDetail implements OnInit {
   event?: Event;
   showJoinModal: boolean = false;
+  showPaymentModal: boolean = false;
   showSuccessModal: boolean = false;
   hasJoined: boolean = false;
+  
+  // Payment form
+  cardNumber: string = '';
+  expiryDate: string = '';
+  cvc: string = '';
+  cardholderName: string = '';
+  isProcessingPayment: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -41,26 +50,97 @@ export class EventDetail implements OnInit {
       return; // Can't join if full
     }
     
-    this.showJoinModal = true;
+    // Check if event is paid
+    if (this.event.price > 0) {
+      this.showPaymentModal = true;
+    } else {
+      this.showJoinModal = true;
+    }
   }
 
   closeJoinModal() {
     this.showJoinModal = false;
   }
 
+  closePaymentModal() {
+    this.showPaymentModal = false;
+    this.resetPaymentForm();
+  }
+
+  resetPaymentForm() {
+    this.cardNumber = '';
+    this.expiryDate = '';
+    this.cvc = '';
+    this.cardholderName = '';
+  }
+
+  processPayment() {
+    if (!this.event) return;
+    
+    this.isProcessingPayment = true;
+    
+    // Simulate payment processing (2 seconds)
+    setTimeout(() => {
+      this.isProcessingPayment = false;
+      this.showPaymentModal = false;
+      this.resetPaymentForm();
+      
+      // After successful payment, join the event
+      this.completeJoin();
+    }, 2000);
+  }
+
   confirmJoin() {
+    if (!this.event) return;
+    this.showJoinModal = false;
+    this.completeJoin();
+  }
+
+  completeJoin() {
     if (!this.event) return;
     
     // Simulate joining the event
     this.event.currentParticipants += 1;
     this.hasJoined = true;
-    this.showJoinModal = false;
     this.showSuccessModal = true;
 
     // Auto-close success modal after 2 seconds
     setTimeout(() => {
       this.showSuccessModal = false;
     }, 2000);
+  }
+
+  formatCardNumber(event: any) {
+    let value = event.target.value.replace(/\s/g, '');
+    let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+    this.cardNumber = formattedValue.slice(0, 19); // 16 digits + 3 spaces
+  }
+
+  formatExpiryDate(event: any) {
+    let value = event.target.value.replace(/\D/g, '');
+    if (value.length >= 2) {
+      value = value.slice(0, 2) + '/' + value.slice(2, 4);
+    }
+    this.expiryDate = value;
+  }
+
+  formatCVC(event: any) {
+    this.cvc = event.target.value.replace(/\D/g, '').slice(0, 3);
+  }
+
+  isPaymentFormValid(): boolean {
+    return this.cardNumber.replace(/\s/g, '').length === 16 &&
+           this.expiryDate.length === 5 &&
+           this.cvc.length === 3 &&
+           this.cardholderName.trim().length > 0;
+  }
+
+  isCardNumberValid(): boolean {
+    return this.cardNumber.replace(/\s/g, '').length === 16;
+  }
+
+  isCardNumberPartial(): boolean {
+    return this.cardNumber.length > 0 && this.cardNumber.replace(/\s/g, '').length < 16;
   }
 
   get spotsLeft(): number {
