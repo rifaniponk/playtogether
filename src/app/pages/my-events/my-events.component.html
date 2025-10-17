@@ -1,16 +1,18 @@
 <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-  <!-- Header -->
-  <div class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-3 py-4">
-      <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        My Events
-      </h1>
-      <div class="flex items-center gap-1.5 mt-1">
-        <ng-icon name="heroCalendar" size="16" class="text-gray-600"></ng-icon>
-        <p class="text-sm text-gray-600">{{ myEvents.length }} event{{ myEvents.length !== 1 ? 's' : '' }} joined</p>
+    <!-- Header -->
+    <div class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-3 py-4">
+        <div class="flex items-center gap-2 mb-1">
+          <h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            My Events
+          </h1>
+        </div>
+        <div class="flex items-center gap-1.5 mt-1">
+          <ng-icon name="heroCalendar" size="16" class="text-gray-600"></ng-icon>
+          <p class="text-sm text-gray-600">{{ myEvents.length }} event{{ myEvents.length !== 1 ? 's' : '' }} joined</p>
+        </div>
       </div>
     </div>
-  </div>
 
   <!-- Content -->
   <div class="max-w-7xl mx-auto px-3 py-4">
