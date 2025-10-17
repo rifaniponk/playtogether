@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { Event } from '../../models/event.model';
 
 @Component({
@@ -10,6 +11,12 @@ import { Event } from '../../models/event.model';
 })
 export class EventCardComponent {
   @Input() event!: Event;
+
+  constructor(private router: Router) {}
+
+  viewDetails() {
+    this.router.navigate(['/event', this.event.id]);
+  }
 
   get spotsLeft(): number {
     return this.event.maxParticipants - this.event.currentParticipants;

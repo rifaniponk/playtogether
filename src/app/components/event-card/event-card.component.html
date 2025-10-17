@@ -1,4 +1,4 @@
-<div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-gray-100">
+<div (click)="viewDetails()" class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-gray-100">
   <!-- Event Image/Icon Header -->
   <div class="relative h-32 flex items-center justify-center" 
        [ngClass]="event.bannerImage ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400'">
@@ -92,11 +92,12 @@
         </p>
       </div>
       <button 
+        (click)="viewDetails(); $event.stopPropagation()"
         [disabled]="isFull"
         [class.opacity-50]="isFull"
         [class.cursor-not-allowed]="isFull"
         class="px-4 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none disabled:hover:shadow-none">
-        {{ isFull ? 'Full' : 'Join' }}
+        {{ isFull ? 'Full' : 'View' }}
       </button>
     </div>
   </div>
