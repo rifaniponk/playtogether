@@ -1,0 +1,144 @@
+<div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+  <!-- Header -->
+  <div class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between mb-4">
+        <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          PlayTogether
+        </h1>
+        <button class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+          Create Event
+        </button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="relative">
+        <input
+          type="text"
+          [(ngModel)]="searchQuery"
+          (ngModelChange)="onSearchChange()"
+          placeholder="Search events, sports, or locations..."
+          class="w-full px-6 py-4 pr-12 rounded-2xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-all duration-300 shadow-sm"
+        />
+        <span class="absolute right-5 top-1/2 transform -translate-y-1/2 text-2xl">🔍</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <!-- Sport Type Filter -->
+    <div class="mb-6">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-semibold text-gray-800">Sports</h2>
+        <button 
+          (click)="toggleFilters()" 
+          class="text-sm text-blue-600 font-medium hover:text-blue-700 flex items-center gap-1">
+          <span>{{ showFilters ? 'Hide' : 'More' }} Filters</span>
+          <span>{{ showFilters ? '▲' : '▼' }}</span>
+        </button>
+      </div>
+      
+      <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+        <button
+          *ngFor="let sport of sportTypes"
+          (click)="selectSport(sport.name)"
+          [class.ring-2]="selectedSport === sport.name"
+          [class.ring-blue-500]="selectedSport === sport.name"
+          [class.bg-gradient-to-r]="selectedSport === sport.name"
+          [class.from-blue-500]="selectedSport === sport.name"
+          [class.to-purple-500]="selectedSport === sport.name"
+          [class.text-white]="selectedSport === sport.name"
+          [class.shadow-lg]="selectedSport === sport.name"
+          class="flex-shrink-0 px-5 py-3 bg-white rounded-full border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 font-medium flex items-center gap-2 hover:shadow-md transform hover:scale-105">
+          <span class="text-xl">{{ sport.icon }}</span>
+          <span>{{ sport.name }}</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Advanced Filters -->
+    <div *ngIf="showFilters" class="mb-6 p-4 bg-white rounded-2xl shadow-sm border border-gray-100">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Skill Level Filter -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Skill Level</label>
+          <select 
+            [(ngModel)]="selectedSkillLevel"
+            (ngModelChange)="filterEvents()"
+            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-all duration-300">
+            <option value="All">All Levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+
+        <!-- Date Filter (Placeholder) -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Date</label>
+          <select class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-all duration-300">
+            <option>Any Date</option>
+            <option>Today</option>
+            <option>Tomorrow</option>
+            <option>This Week</option>
+            <option>This Weekend</option>
+          </select>
+        </div>
+
+        <!-- Distance Filter (Placeholder) -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Distance</label>
+          <select class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-all duration-300">
+            <option>Any Distance</option>
+            <option>Within 5 km</option>
+            <option>Within 10 km</option>
+            <option>Within 20 km</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-4 flex justify-end">
+        <button 
+          (click)="clearFilters()"
+          class="px-6 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-all duration-300">
+          Clear All Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- Results Count -->
+    <div class="mb-4 flex items-center justify-between">
+      <p class="text-gray-600">
+        <span class="font-semibold text-gray-800">{{ filteredEvents.length }}</span> events found
+      </p>
+      <div class="flex gap-2">
+        <button class="p-2 rounded-lg hover:bg-gray-100 transition-all duration-300" title="Grid View">
+          <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Events Grid -->
+    <div *ngIf="filteredEvents.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <app-event-card 
+        *ngFor="let event of filteredEvents" 
+        [event]="event">
+      </app-event-card>
+    </div>
+
+    <!-- No Results -->
+    <div *ngIf="filteredEvents.length === 0" class="text-center py-16">
+      <div class="text-6xl mb-4">😔</div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-2">No events found</h3>
+      <p class="text-gray-600 mb-6">Try adjusting your filters or search terms</p>
+      <button 
+        (click)="clearFilters()"
+        class="px-6 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-all duration-300">
+        Clear Filters
+      </button>
+    </div>
+  </div>
+</div>
+
