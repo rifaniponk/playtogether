@@ -9,7 +9,7 @@ export interface Event {
   price: number;
   currentParticipants: number;
   maxParticipants: number;
-  skillLevel: 'Beginner' | 'Intermediate' | 'Advanced';
+  skillLevel: 'All Levels' | 'Beginner' | 'Intermediate' | 'Advanced';
   hostName: string;
   hostAvatar: string;
   description: string;
