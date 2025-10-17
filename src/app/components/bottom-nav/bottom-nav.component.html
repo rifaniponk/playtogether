@@ -25,6 +25,23 @@
         ></div>
       </a>
 
+      <!-- Map -->
+      <a
+        routerLink="/map"
+        [class.text-blue-600]="isActive('/map')"
+        [class.text-gray-600]="!isActive('/map')"
+        class="flex flex-col items-center justify-center flex-1 h-full transition-all duration-300 hover:text-blue-600 relative group"
+      >
+        <ng-icon name="heroMapPin" size="24" [class.scale-110]="isActive('/map')"></ng-icon>
+        <span class="text-xs font-medium mt-1" [class.font-bold]="isActive('/map')">
+          Map
+        </span>
+        <div
+          *ngIf="isActive('/map')"
+          class="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-b-full"
+        ></div>
+      </a>
+
       <!-- My Events -->
       <a
         routerLink="/my-events"

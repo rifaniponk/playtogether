@@ -1,0 +1,59 @@
+<div class="map-view-container">
+  <!-- Header -->
+  <div class="map-header">
+    <div class="header-content">
+      <div class="flex items-center gap-2">
+        <img src="images/squarelogo.png" alt="PlayTogether Logo" class="h-8 w-auto">
+        <div>
+          <h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Live Map
+          </h1>
+          <p class="text-xs text-gray-600">Events happening around you</p>
+        </div>
+      </div>
+      
+      <!-- My Location Button -->
+      <button 
+        (click)="goToMyLocation()"
+        class="location-btn">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Sport Filter Pills -->
+    <div class="sport-filters">
+      <button
+        *ngFor="let sport of sportTypes"
+        (click)="selectSport(sport.name)"
+        [class.active]="selectedSport === sport.name"
+        [style.--sport-color]="sport.color"
+        class="sport-pill">
+        <span class="text-base">{{ sport.icon }}</span>
+        <span class="text-xs font-medium">{{ sport.name }}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map" class="map-container"></div>
+
+  <!-- Stats Overlay -->
+  <div class="stats-overlay">
+    <div class="stat-card">
+      <div class="stat-icon">🎯</div>
+      <div>
+        <p class="stat-value">{{ events.length }}</p>
+        <p class="stat-label">Active Events</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div>
+        <p class="stat-value">{{ totalPlayers }}</p>
+        <p class="stat-label">Players Online</p>
+      </div>
+    </div>
+  </div>
+</div>

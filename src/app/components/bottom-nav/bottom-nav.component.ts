@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroMagnifyingGlass, heroCalendar, heroCog6Tooth } from '@ng-icons/heroicons/outline';
+import { heroMagnifyingGlass, heroCalendar, heroCog6Tooth, heroMapPin } from '@ng-icons/heroicons/outline';
 
 @Component({
   selector: 'app-bottom-nav',
@@ -13,6 +13,7 @@ import { heroMagnifyingGlass, heroCalendar, heroCog6Tooth } from '@ng-icons/hero
       heroMagnifyingGlass,
       heroCalendar,
       heroCog6Tooth,
+      heroMapPin,
     }),
   ],
   templateUrl: './bottom-nav.component.html',
