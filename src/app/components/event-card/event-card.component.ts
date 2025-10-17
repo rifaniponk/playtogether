@@ -29,7 +29,7 @@ export class EventCardComponent {
 
   formatPrice(price: number): string {
     if (price === 0) return 'FREE';
-    return `Rp ${price.toLocaleString('id-ID')}`;
+    return `$${price.toFixed(2)}`;
   }
 
   getSkillLevelColor(level: string): string {

@@ -14,17 +14,17 @@ export class MockDataService {
       sport: 'Badminton',
       date: '2025-10-18',
       time: '09:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'GOR Menteng Badminton Court',
-      price: 50000,
+      location: 'Manhattan, NY',
+      venue: 'Chelsea Sports Complex',
+      price: 25,
       currentParticipants: 6,
       maxParticipants: 8,
       skillLevel: 'Intermediate',
-      hostName: 'Ahmad Rizki',
+      hostName: 'Alex Chen',
       hostAvatar: '👨',
       description: 'Friendly badminton session for intermediate players. All equipment provided!',
       image: '🏸',
-      distance: '2.3 km'
+      distance: '1.4 mi'
     },
     {
       id: '2',
@@ -32,17 +32,17 @@ export class MockDataService {
       sport: 'Badminton',
       date: '2025-10-20',
       time: '06:00 PM',
-      location: 'Tangerang',
-      venue: 'BSD Badminton Arena',
-      price: 75000,
+      location: 'Brooklyn, NY',
+      venue: 'Prospect Park Recreation Center',
+      price: 30,
       currentParticipants: 7,
       maxParticipants: 8,
       skillLevel: 'Advanced',
-      hostName: 'Susi Handayani',
+      hostName: 'Sarah Johnson',
       hostAvatar: '👩',
       description: 'Competitive singles practice',
       image: '🏸',
-      distance: '11.2 km'
+      distance: '7.0 mi'
     },
     {
       id: '3',
@@ -50,29 +50,29 @@ export class MockDataService {
       sport: 'Badminton',
       date: '2025-10-22',
       time: '10:00 AM',
-      location: 'Jakarta Barat',
-      venue: 'Taman Anggrek Sports Center',
-      price: 35000,
+      location: 'Queens, NY',
+      venue: 'Flushing Meadows Sports Center',
+      price: 20,
       currentParticipants: 4,
       maxParticipants: 12,
       skillLevel: 'Beginner',
-      hostName: 'Coach Budi',
+      hostName: 'Coach Mike',
       hostAvatar: '👨‍🏫',
       description: 'Learn badminton basics from scratch',
       image: '🏸',
-      distance: '7.8 km'
+      distance: '4.8 mi'
     },
     
     // Hiking Events
     {
       id: '4',
-      title: 'Sunset Hiking at Gunung Gede',
+      title: 'Sunset Hiking at Bear Mountain',
       sport: 'Hiking',
       date: '2025-10-19',
       time: '04:00 PM',
-      location: 'Bogor',
-      venue: 'Gunung Gede Trailhead',
-      price: 75000,
+      location: 'Bear Mountain, NY',
+      venue: 'Bear Mountain State Park',
+      price: 35,
       currentParticipants: 12,
       maxParticipants: 20,
       skillLevel: 'Beginner',
@@ -80,17 +80,17 @@ export class MockDataService {
       hostAvatar: '👩‍🦰',
       description: 'Join us for a beautiful sunset hike! Perfect for beginners.',
       image: '⛰️',
-      distance: '15.8 km'
+      distance: '9.8 mi'
     },
     {
       id: '5',
-      title: 'Weekend Trek to Gunung Salak',
+      title: 'Weekend Trek to Blue Ridge',
       sport: 'Hiking',
       date: '2025-10-25',
       time: '06:00 AM',
-      location: 'Bogor',
-      venue: 'Gunung Salak Base',
-      price: 125000,
+      location: 'Asheville, NC',
+      venue: 'Blue Ridge Parkway',
+      price: 55,
       currentParticipants: 15,
       maxParticipants: 25,
       skillLevel: 'Intermediate',
@@ -98,7 +98,7 @@ export class MockDataService {
       hostAvatar: '🧗',
       description: 'Full day hiking adventure',
       image: '⛰️',
-      distance: '18.5 km'
+      distance: '11.5 mi'
     },
     {
       id: '6',
@@ -106,8 +106,8 @@ export class MockDataService {
       sport: 'Hiking',
       date: '2025-10-21',
       time: '07:00 AM',
-      location: 'Depok',
-      venue: 'Situ Gede',
+      location: 'Central Park, NY',
+      venue: 'Central Park North Woods',
       price: 0,
       currentParticipants: 8,
       maxParticipants: 30,
@@ -116,7 +116,7 @@ export class MockDataService {
       hostAvatar: '🌳',
       description: 'Relaxed morning nature walk',
       image: '🥾',
-      distance: '9.3 km'
+      distance: '5.8 mi'
     },
 
     // Basketball Events
@@ -126,17 +126,17 @@ export class MockDataService {
       sport: 'Basketball',
       date: '2025-10-17',
       time: '07:00 PM',
-      location: 'Jakarta Timur',
-      venue: 'Lapangan Basket Rawamangun',
-      price: 40000,
+      location: 'Bronx, NY',
+      venue: 'Rucker Park',
+      price: 20,
       currentParticipants: 9,
       maxParticipants: 10,
       skillLevel: 'Intermediate',
-      hostName: 'Michael Jordan Jr',
+      hostName: 'Mike Jordan',
       hostAvatar: '🏀',
       description: 'Casual 5v5 basketball game. Almost full!',
       image: '🏀',
-      distance: '8.5 km'
+      distance: '5.3 mi'
     },
     {
       id: '8',
@@ -144,9 +144,9 @@ export class MockDataService {
       sport: 'Basketball',
       date: '2025-10-23',
       time: '05:00 PM',
-      location: 'Jakarta Selatan',
-      venue: 'Senayan Street Court',
-      price: 25000,
+      location: 'Los Angeles, CA',
+      venue: 'Venice Beach Courts',
+      price: 15,
       currentParticipants: 5,
       maxParticipants: 6,
       skillLevel: 'Advanced',
@@ -154,7 +154,7 @@ export class MockDataService {
       hostAvatar: '⛹️',
       description: 'Fast-paced 3v3 tournament',
       image: '🏀',
-      distance: '4.2 km'
+      distance: '2.6 mi'
     },
     {
       id: '9',
@@ -162,17 +162,17 @@ export class MockDataService {
       sport: 'Basketball',
       date: '2025-10-26',
       time: '09:00 AM',
-      location: 'Bekasi',
-      venue: 'Grand Metropolitan Mall Court',
-      price: 50000,
+      location: 'Chicago, IL',
+      venue: 'Grant Park Basketball Courts',
+      price: 25,
       currentParticipants: 16,
       maxParticipants: 20,
       skillLevel: 'Intermediate',
-      hostName: 'Bekasi Ballers',
+      hostName: 'Chicago Ballers',
       hostAvatar: '🏀',
       description: 'Organized league matches',
       image: '🏀',
-      distance: '13.7 km'
+      distance: '8.5 mi'
     },
 
     // Tennis Events
@@ -182,9 +182,9 @@ export class MockDataService {
       sport: 'Tennis',
       date: '2025-10-18',
       time: '10:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'Tennis Indoor Senayan',
-      price: 120000,
+      location: 'Manhattan, NY',
+      venue: 'Central Park Tennis Center',
+      price: 50,
       currentParticipants: 3,
       maxParticipants: 4,
       skillLevel: 'Advanced',
@@ -192,7 +192,7 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Professional tennis practice session',
       image: '🎾',
-      distance: '4.7 km'
+      distance: '2.9 mi'
     },
     {
       id: '11',
@@ -200,9 +200,9 @@ export class MockDataService {
       sport: 'Tennis',
       date: '2025-10-24',
       time: '04:00 PM',
-      location: 'Jakarta Utara',
-      venue: 'Kelapa Gading Tennis Club',
-      price: 90000,
+      location: 'Miami, FL',
+      venue: 'Miami Beach Tennis Club',
+      price: 40,
       currentParticipants: 6,
       maxParticipants: 8,
       skillLevel: 'Intermediate',
@@ -210,7 +210,7 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Friendly doubles matches',
       image: '🎾',
-      distance: '10.1 km'
+      distance: '6.3 mi'
     },
     {
       id: '12',
@@ -218,9 +218,9 @@ export class MockDataService {
       sport: 'Tennis',
       date: '2025-10-27',
       time: '08:00 AM',
-      location: 'Jakarta Barat',
-      venue: 'Puri Indah Tennis Academy',
-      price: 150000,
+      location: 'San Diego, CA',
+      venue: 'Balboa Park Tennis Courts',
+      price: 65,
       currentParticipants: 8,
       maxParticipants: 15,
       skillLevel: 'Beginner',
@@ -228,7 +228,7 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Learn tennis fundamentals',
       image: '🎾',
-      distance: '8.9 km'
+      distance: '5.5 mi'
     },
 
     // Padel Events
@@ -238,9 +238,9 @@ export class MockDataService {
       sport: 'Padel',
       date: '2025-10-18',
       time: '02:00 PM',
-      location: 'Jakarta Pusat',
-      venue: 'Senayan Padel Club',
-      price: 100000,
+      location: 'Austin, TX',
+      venue: 'Austin Padel Club',
+      price: 45,
       currentParticipants: 14,
       maxParticipants: 16,
       skillLevel: 'Advanced',
@@ -248,7 +248,7 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Competitive padel tournament. Advanced players only!',
       image: '🎾',
-      distance: '5.1 km'
+      distance: '3.2 mi'
     },
     {
       id: '14',
@@ -256,9 +256,9 @@ export class MockDataService {
       sport: 'Padel',
       date: '2025-10-22',
       time: '06:30 PM',
-      location: 'Jakarta Selatan',
-      venue: 'Pondok Indah Padel Court',
-      price: 80000,
+      location: 'Houston, TX',
+      venue: 'Memorial Park Padel Courts',
+      price: 35,
       currentParticipants: 4,
       maxParticipants: 8,
       skillLevel: 'Intermediate',
@@ -266,7 +266,7 @@ export class MockDataService {
       hostAvatar: '🎾',
       description: 'Relaxed padel for fun',
       image: '🎾',
-      distance: '6.4 km'
+      distance: '4.0 mi'
     },
 
     // Volleyball Events
@@ -276,9 +276,9 @@ export class MockDataService {
       sport: 'Volleyball',
       date: '2025-10-21',
       time: '05:00 PM',
-      location: 'Ancol',
-      venue: 'Ancol Beach',
-      price: 60000,
+      location: 'Santa Monica, CA',
+      venue: 'Santa Monica Beach',
+      price: 25,
       currentParticipants: 4,
       maxParticipants: 12,
       skillLevel: 'Beginner',
@@ -286,7 +286,7 @@ export class MockDataService {
       hostAvatar: '🏐',
       description: 'Fun beach volleyball for everyone!',
       image: '🏐',
-      distance: '12.3 km'
+      distance: '7.7 mi'
     },
     {
       id: '16',
@@ -294,9 +294,9 @@ export class MockDataService {
       sport: 'Volleyball',
       date: '2025-10-19',
       time: '07:00 PM',
-      location: 'Jakarta Timur',
-      venue: 'Klapa Village Sports Hall',
-      price: 45000,
+      location: 'Seattle, WA',
+      venue: 'Seattle Sports Complex',
+      price: 20,
       currentParticipants: 11,
       maxParticipants: 12,
       skillLevel: 'Intermediate',
@@ -304,7 +304,7 @@ export class MockDataService {
       hostAvatar: '🏐',
       description: 'Competitive indoor volleyball',
       image: '🏐',
-      distance: '9.8 km'
+      distance: '6.1 mi'
     },
     {
       id: '17',
@@ -312,9 +312,9 @@ export class MockDataService {
       sport: 'Volleyball',
       date: '2025-10-28',
       time: '10:00 AM',
-      location: 'Tangerang',
-      venue: 'Alam Sutera Sports Complex',
-      price: 70000,
+      location: 'Portland, OR',
+      venue: 'Portland Recreation Center',
+      price: 30,
       currentParticipants: 18,
       maxParticipants: 24,
       skillLevel: 'Advanced',
@@ -322,7 +322,7 @@ export class MockDataService {
       hostAvatar: '🏐',
       description: 'High-level mixed tournament',
       image: '🏐',
-      distance: '14.2 km'
+      distance: '8.9 mi'
     },
 
     // Running Events
@@ -332,17 +332,17 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-19',
       time: '05:30 AM',
-      location: 'Jakarta Pusat',
-      venue: 'Gelora Bung Karno',
+      location: 'Boston, MA',
+      venue: 'Boston Common',
       price: 0,
       currentParticipants: 25,
       maxParticipants: 50,
       skillLevel: 'Beginner',
-      hostName: 'Jakarta Runners',
+      hostName: 'Boston Runners',
       hostAvatar: '🏃',
-      description: 'Weekly morning run, 5km route. Free!',
+      description: 'Weekly morning run, 3-mile route. Free!',
       image: '🏃',
-      distance: '6.2 km'
+      distance: '3.9 mi'
     },
     {
       id: '19',
@@ -350,9 +350,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-26',
       time: '06:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'Sudirman Street Start Point',
-      price: 100000,
+      location: 'San Francisco, CA',
+      venue: 'Golden Gate Park',
+      price: 45,
       currentParticipants: 45,
       maxParticipants: 100,
       skillLevel: 'Intermediate',
@@ -360,7 +360,7 @@ export class MockDataService {
       hostAvatar: '🏃',
       description: 'Fundraising 10K run',
       image: '🏃',
-      distance: '3.5 km'
+      distance: '2.2 mi'
     },
     {
       id: '20',
@@ -368,17 +368,17 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-23',
       time: '07:00 AM',
-      location: 'Sentul',
-      venue: 'Sentul Highlands',
-      price: 85000,
+      location: 'Denver, CO',
+      venue: 'Red Rocks Trail',
+      price: 40,
       currentParticipants: 12,
       maxParticipants: 30,
       skillLevel: 'Advanced',
       hostName: 'Trail Blazers',
       hostAvatar: '🏃‍♂️',
-      description: '15km trail running',
+      description: '9-mile trail running',
       image: '🏃',
-      distance: '22.1 km'
+      distance: '13.8 mi'
     },
     {
       id: '21',
@@ -386,8 +386,8 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-20',
       time: '06:00 PM',
-      location: 'Jakarta Barat',
-      venue: 'Central Park Mall',
+      location: 'Brooklyn, NY',
+      venue: 'Brooklyn Bridge Park',
       price: 0,
       currentParticipants: 15,
       maxParticipants: 40,
@@ -396,7 +396,7 @@ export class MockDataService {
       hostAvatar: '🏃‍♀️',
       description: 'Easy jog followed by coffee',
       image: '🏃',
-      distance: '7.6 km'
+      distance: '4.7 mi'
     },
 
     // Yoga Events
@@ -406,8 +406,8 @@ export class MockDataService {
       sport: 'Yoga',
       date: '2025-10-20',
       time: '06:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'Taman Langsat',
+      location: 'Central Park, NY',
+      venue: 'Sheep Meadow',
       price: 0,
       currentParticipants: 8,
       maxParticipants: 15,
@@ -416,7 +416,7 @@ export class MockDataService {
       hostAvatar: '🧘',
       description: 'Free outdoor yoga session. Bring your own mat!',
       image: '🧘',
-      distance: '1.2 km'
+      distance: '0.8 mi'
     },
     {
       id: '23',
@@ -424,9 +424,9 @@ export class MockDataService {
       sport: 'Yoga',
       date: '2025-10-22',
       time: '07:00 PM',
-      location: 'Jakarta Selatan',
-      venue: 'Senopati Yoga Studio',
-      price: 120000,
+      location: 'Los Angeles, CA',
+      venue: 'West Hollywood Yoga Studio',
+      price: 50,
       currentParticipants: 10,
       maxParticipants: 20,
       skillLevel: 'Intermediate',
@@ -434,7 +434,7 @@ export class MockDataService {
       hostAvatar: '🧘‍♀️',
       description: 'Intense power yoga workout',
       image: '🧘',
-      distance: '4.8 km'
+      distance: '3.0 mi'
     },
     {
       id: '24',
@@ -442,9 +442,9 @@ export class MockDataService {
       sport: 'Yoga',
       date: '2025-10-24',
       time: '05:00 PM',
-      location: 'Ancol',
-      venue: 'Ancol Beach',
-      price: 75000,
+      location: 'Malibu, CA',
+      venue: 'Zuma Beach',
+      price: 35,
       currentParticipants: 12,
       maxParticipants: 25,
       skillLevel: 'Beginner',
@@ -452,7 +452,7 @@ export class MockDataService {
       hostAvatar: '🧘',
       description: 'Relaxing yoga with ocean view',
       image: '🧘',
-      distance: '11.9 km'
+      distance: '7.4 mi'
     },
     {
       id: '25',
@@ -460,9 +460,9 @@ export class MockDataService {
       sport: 'Yoga',
       date: '2025-10-25',
       time: '09:00 AM',
-      location: 'Jakarta Pusat',
-      venue: 'Grand Indonesia Wellness',
-      price: 150000,
+      location: 'Manhattan, NY',
+      venue: 'SoHo Hot Yoga',
+      price: 65,
       currentParticipants: 14,
       maxParticipants: 15,
       skillLevel: 'Advanced',
@@ -470,27 +470,27 @@ export class MockDataService {
       hostAvatar: '🧘‍♂️',
       description: '90-minute hot yoga class',
       image: '🧘',
-      distance: '5.3 km'
+      distance: '3.3 mi'
     },
 
     // Soccer/Football Events
     {
       id: '26',
-      title: 'Futsal Friday Night',
+      title: 'Friday Night Soccer',
       sport: 'Running',
       date: '2025-10-17',
       time: '08:00 PM',
-      location: 'Jakarta Selatan',
-      venue: 'Futsal Fatmawati',
-      price: 50000,
+      location: 'Queens, NY',
+      venue: 'Astoria Park Field',
+      price: 25,
       currentParticipants: 9,
       maxParticipants: 10,
       skillLevel: 'Intermediate',
-      hostName: 'Futsal Heroes',
+      hostName: 'Soccer Heroes',
       hostAvatar: '⚽',
-      description: '5v5 futsal match',
+      description: '5v5 indoor soccer match',
       image: '⚽',
-      distance: '5.7 km'
+      distance: '3.6 mi'
     },
     {
       id: '27',
@@ -498,9 +498,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-27',
       time: '08:00 AM',
-      location: 'Jakarta Timur',
-      venue: 'Lapangan Rawamangun',
-      price: 35000,
+      location: 'San Jose, CA',
+      venue: 'Almaden Lake Park',
+      price: 20,
       currentParticipants: 18,
       maxParticipants: 22,
       skillLevel: 'Beginner',
@@ -508,17 +508,17 @@ export class MockDataService {
       hostAvatar: '⚽',
       description: 'Casual 11v11 football',
       image: '⚽',
-      distance: '8.4 km'
+      distance: '5.2 mi'
     },
     {
       id: '28',
-      title: 'Kids Futsal Training',
+      title: 'Kids Soccer Training',
       sport: 'Running',
       date: '2025-10-21',
       time: '02:00 PM',
-      location: 'Tangerang',
-      venue: 'BSD Sports Arena',
-      price: 75000,
+      location: 'Austin, TX',
+      venue: 'Zilker Park',
+      price: 35,
       currentParticipants: 12,
       maxParticipants: 20,
       skillLevel: 'Beginner',
@@ -526,7 +526,7 @@ export class MockDataService {
       hostAvatar: '⚽',
       description: 'Training for kids 8-12 years',
       image: '⚽',
-      distance: '12.8 km'
+      distance: '8.0 mi'
     },
 
     // Cycling Events
@@ -536,17 +536,17 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-26',
       time: '06:00 AM',
-      location: 'Bogor',
-      venue: 'Kebun Raya Bogor',
-      price: 50000,
+      location: 'Napa Valley, CA',
+      venue: 'Napa Valley Bike Path',
+      price: 25,
       currentParticipants: 22,
       maxParticipants: 40,
       skillLevel: 'Beginner',
       hostName: 'Bike Squad',
       hostAvatar: '🚴',
-      description: '30km leisure cycling',
+      description: '18-mile leisure cycling',
       image: '🚴',
-      distance: '16.3 km'
+      distance: '10.2 mi'
     },
     {
       id: '30',
@@ -554,9 +554,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-25',
       time: '07:00 AM',
-      location: 'Sentul',
-      venue: 'Sentul MTB Trail',
-      price: 125000,
+      location: 'Moab, UT',
+      venue: 'Slickrock Trail',
+      price: 55,
       currentParticipants: 15,
       maxParticipants: 25,
       skillLevel: 'Advanced',
@@ -564,7 +564,7 @@ export class MockDataService {
       hostAvatar: '🚵',
       description: 'Challenging mountain bike trail',
       image: '🚴',
-      distance: '21.5 km'
+      distance: '13.4 mi'
     },
     {
       id: '31',
@@ -572,8 +572,8 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-18',
       time: '08:00 PM',
-      location: 'Jakarta Pusat',
-      venue: 'Bundaran HI',
+      location: 'Chicago, IL',
+      venue: 'Lake Shore Drive',
       price: 0,
       currentParticipants: 35,
       maxParticipants: 60,
@@ -582,7 +582,7 @@ export class MockDataService {
       hostAvatar: '🚴‍♂️',
       description: 'Free night cycling tour',
       image: '🚴',
-      distance: '4.1 km'
+      distance: '2.6 mi'
     },
 
     // Swimming Events
@@ -592,9 +592,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-20',
       time: '05:30 AM',
-      location: 'Jakarta Selatan',
-      venue: 'Senayan Aquatic Center',
-      price: 40000,
+      location: 'Manhattan, NY',
+      venue: 'Chelsea Piers Aquatic Center',
+      price: 20,
       currentParticipants: 8,
       maxParticipants: 20,
       skillLevel: 'Intermediate',
@@ -602,7 +602,7 @@ export class MockDataService {
       hostAvatar: '🏊',
       description: 'Open lane swimming session',
       image: '🏊',
-      distance: '4.9 km'
+      distance: '3.1 mi'
     },
     {
       id: '33',
@@ -610,9 +610,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-23',
       time: '06:00 PM',
-      location: 'Jakarta Barat',
-      venue: 'Puri Indah Pool',
-      price: 100000,
+      location: 'Miami, FL',
+      venue: 'Miami Beach Aquatic Center',
+      price: 45,
       currentParticipants: 6,
       maxParticipants: 10,
       skillLevel: 'Beginner',
@@ -620,7 +620,7 @@ export class MockDataService {
       hostAvatar: '🏊‍♂️',
       description: 'Learn to swim basics',
       image: '🏊',
-      distance: '9.2 km'
+      distance: '5.7 mi'
     },
     {
       id: '34',
@@ -628,9 +628,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-24',
       time: '06:00 AM',
-      location: 'Jakarta Utara',
-      venue: 'Kelapa Gading Pool',
-      price: 65000,
+      location: 'San Diego, CA',
+      venue: 'Mission Bay Aquatic Center',
+      price: 30,
       currentParticipants: 12,
       maxParticipants: 15,
       skillLevel: 'Advanced',
@@ -638,7 +638,7 @@ export class MockDataService {
       hostAvatar: '🏊',
       description: 'Intensive swim training',
       image: '🏊',
-      distance: '10.7 km'
+      distance: '6.7 mi'
     },
 
     // Boxing/Martial Arts
@@ -648,9 +648,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-22',
       time: '06:30 PM',
-      location: 'Jakarta Selatan',
-      venue: 'Fight Club Gym',
-      price: 85000,
+      location: 'Brooklyn, NY',
+      venue: 'Gleason\'s Gym',
+      price: 40,
       currentParticipants: 11,
       maxParticipants: 15,
       skillLevel: 'Intermediate',
@@ -658,7 +658,7 @@ export class MockDataService {
       hostAvatar: '🥊',
       description: 'High intensity boxing workout',
       image: '🥊',
-      distance: '6.1 km'
+      distance: '3.8 mi'
     },
     {
       id: '36',
@@ -666,9 +666,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-19',
       time: '07:00 PM',
-      location: 'Jakarta Pusat',
-      venue: 'Tiger Muay Thai Jakarta',
-      price: 120000,
+      location: 'Los Angeles, CA',
+      venue: 'Hollywood Muay Thai',
+      price: 50,
       currentParticipants: 8,
       maxParticipants: 12,
       skillLevel: 'Beginner',
@@ -676,7 +676,7 @@ export class MockDataService {
       hostAvatar: '🥋',
       description: 'Introduction to Muay Thai',
       image: '🥊',
-      distance: '5.5 km'
+      distance: '3.4 mi'
     },
     {
       id: '37',
@@ -684,9 +684,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-27',
       time: '05:00 PM',
-      location: 'Bekasi',
+      location: 'Las Vegas, NV',
       venue: 'Champions Gym',
-      price: 75000,
+      price: 35,
       currentParticipants: 9,
       maxParticipants: 10,
       skillLevel: 'Advanced',
@@ -694,7 +694,7 @@ export class MockDataService {
       hostAvatar: '🥊',
       description: 'Advanced sparring session',
       image: '🥊',
-      distance: '15.2 km'
+      distance: '9.5 mi'
     },
 
     // Additional Badminton
@@ -704,9 +704,9 @@ export class MockDataService {
       sport: 'Badminton',
       date: '2025-10-21',
       time: '12:00 PM',
-      location: 'Jakarta Pusat',
-      venue: 'Kuningan City Sports',
-      price: 60000,
+      location: 'San Francisco, CA',
+      venue: 'Presidio Sports Center',
+      price: 30,
       currentParticipants: 6,
       maxParticipants: 8,
       skillLevel: 'Intermediate',
@@ -714,7 +714,7 @@ export class MockDataService {
       hostAvatar: '💼',
       description: 'Quick badminton during lunch',
       image: '🏸',
-      distance: '3.8 km'
+      distance: '2.4 mi'
     },
     {
       id: '39',
@@ -722,9 +722,9 @@ export class MockDataService {
       sport: 'Badminton',
       date: '2025-10-28',
       time: '02:00 PM',
-      location: 'Depok',
-      venue: 'Margonda Sports Hall',
-      price: 90000,
+      location: 'Seattle, WA',
+      venue: 'Seattle Badminton Club',
+      price: 40,
       currentParticipants: 14,
       maxParticipants: 16,
       skillLevel: 'Advanced',
@@ -732,7 +732,7 @@ export class MockDataService {
       hostAvatar: '🏆',
       description: 'Competitive mixed doubles',
       image: '🏸',
-      distance: '12.4 km'
+      distance: '7.7 mi'
     },
 
     // More Basketball
@@ -742,9 +742,9 @@ export class MockDataService {
       sport: 'Basketball',
       date: '2025-10-26',
       time: '09:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'Senayan Basketball Hall',
-      price: 150000,
+      location: 'Philadelphia, PA',
+      venue: 'Temple University Recreation Center',
+      price: 65,
       currentParticipants: 24,
       maxParticipants: 30,
       skillLevel: 'Beginner',
@@ -752,7 +752,7 @@ export class MockDataService {
       hostAvatar: '🏫',
       description: 'Training camp for youth 10-16',
       image: '🏀',
-      distance: '5.2 km'
+      distance: '3.2 mi'
     },
     {
       id: '41',
@@ -760,9 +760,9 @@ export class MockDataService {
       sport: 'Basketball',
       date: '2025-10-24',
       time: '07:00 PM',
-      location: 'Tangerang',
-      venue: 'Living World Court',
-      price: 45000,
+      location: 'Atlanta, GA',
+      venue: 'Piedmont Park Courts',
+      price: 20,
       currentParticipants: 8,
       maxParticipants: 10,
       skillLevel: 'Intermediate',
@@ -770,7 +770,7 @@ export class MockDataService {
       hostAvatar: '👩‍🦰',
       description: 'Women\'s basketball matches',
       image: '🏀',
-      distance: '13.1 km'
+      distance: '8.2 mi'
     },
 
     // Table Tennis
@@ -780,9 +780,9 @@ export class MockDataService {
       sport: 'Tennis',
       date: '2025-10-23',
       time: '06:00 PM',
-      location: 'Jakarta Timur',
-      venue: 'Cibubur TT Center',
-      price: 40000,
+      location: 'San Jose, CA',
+      venue: 'San Jose Table Tennis Club',
+      price: 20,
       currentParticipants: 15,
       maxParticipants: 20,
       skillLevel: 'Intermediate',
@@ -790,7 +790,7 @@ export class MockDataService {
       hostAvatar: '🏓',
       description: 'Singles table tennis tournament',
       image: '🏓',
-      distance: '11.6 km'
+      distance: '7.2 mi'
     },
     {
       id: '43',
@@ -798,9 +798,9 @@ export class MockDataService {
       sport: 'Tennis',
       date: '2025-10-21',
       time: '10:00 AM',
-      location: 'Jakarta Barat',
-      venue: 'Tomang TT Club',
-      price: 55000,
+      location: 'Queens, NY',
+      venue: 'Flushing Table Tennis Center',
+      price: 25,
       currentParticipants: 7,
       maxParticipants: 12,
       skillLevel: 'Beginner',
@@ -808,7 +808,7 @@ export class MockDataService {
       hostAvatar: '🏓',
       description: 'Learn table tennis basics',
       image: '🏓',
-      distance: '8.3 km'
+      distance: '5.2 mi'
     },
 
     // Golf
@@ -818,9 +818,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-26',
       time: '07:00 AM',
-      location: 'Tangerang',
-      venue: 'Damai Indah Golf',
-      price: 350000,
+      location: 'Scottsdale, AZ',
+      venue: 'TPC Scottsdale',
+      price: 150,
       currentParticipants: 3,
       maxParticipants: 4,
       skillLevel: 'Intermediate',
@@ -828,7 +828,7 @@ export class MockDataService {
       hostAvatar: '⛳',
       description: '18 holes golf round',
       image: '⛳',
-      distance: '16.8 km'
+      distance: '10.5 mi'
     },
     {
       id: '45',
@@ -836,9 +836,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-24',
       time: '08:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'Senayan Golf Driving Range',
-      price: 200000,
+      location: 'Orlando, FL',
+      venue: 'Bay Hill Golf Academy',
+      price: 85,
       currentParticipants: 8,
       maxParticipants: 15,
       skillLevel: 'Beginner',
@@ -846,7 +846,7 @@ export class MockDataService {
       hostAvatar: '⛳',
       description: 'Introduction to golf',
       image: '⛳',
-      distance: '4.5 km'
+      distance: '2.8 mi'
     },
 
     // Rock Climbing
@@ -856,9 +856,9 @@ export class MockDataService {
       sport: 'Hiking',
       date: '2025-10-22',
       time: '06:00 PM',
-      location: 'Jakarta Selatan',
-      venue: 'Boulder House',
-      price: 85000,
+      location: 'Brooklyn, NY',
+      venue: 'Brooklyn Boulders',
+      price: 40,
       currentParticipants: 6,
       maxParticipants: 12,
       skillLevel: 'Beginner',
@@ -866,7 +866,7 @@ export class MockDataService {
       hostAvatar: '🧗',
       description: 'Beginner-friendly climbing',
       image: '🧗',
-      distance: '7.2 km'
+      distance: '4.5 mi'
     },
     {
       id: '47',
@@ -874,9 +874,9 @@ export class MockDataService {
       sport: 'Hiking',
       date: '2025-10-25',
       time: '07:00 PM',
-      location: 'Jakarta Pusat',
-      venue: 'Climb Central',
-      price: 100000,
+      location: 'Boulder, CO',
+      venue: 'Movement Climbing Gym',
+      price: 45,
       currentParticipants: 9,
       maxParticipants: 10,
       skillLevel: 'Advanced',
@@ -884,7 +884,7 @@ export class MockDataService {
       hostAvatar: '🧗‍♂️',
       description: 'Challenging boulder problems',
       image: '🧗',
-      distance: '6.9 km'
+      distance: '4.3 mi'
     },
 
     // More Yoga
@@ -894,9 +894,9 @@ export class MockDataService {
       sport: 'Yoga',
       date: '2025-10-27',
       time: '10:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'Fly Yoga Studio',
-      price: 175000,
+      location: 'Miami, FL',
+      venue: 'South Beach Aerial Studio',
+      price: 75,
       currentParticipants: 7,
       maxParticipants: 10,
       skillLevel: 'Intermediate',
@@ -904,7 +904,7 @@ export class MockDataService {
       hostAvatar: '🎪',
       description: 'Yoga with hammocks',
       image: '🧘',
-      distance: '5.8 km'
+      distance: '3.6 mi'
     },
     {
       id: '49',
@@ -912,9 +912,9 @@ export class MockDataService {
       sport: 'Yoga',
       date: '2025-10-28',
       time: '08:00 AM',
-      location: 'Bogor',
-      venue: 'Puncak Retreat Center',
-      price: 250000,
+      location: 'Sedona, AZ',
+      venue: 'Red Rock Yoga Retreat',
+      price: 120,
       currentParticipants: 12,
       maxParticipants: 20,
       skillLevel: 'Beginner',
@@ -922,7 +922,7 @@ export class MockDataService {
       hostAvatar: '🧘‍♂️',
       description: 'Full day yoga and meditation',
       image: '🧘',
-      distance: '19.3 km'
+      distance: '12.0 mi'
     },
 
     // Dance Fitness
@@ -932,9 +932,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-23',
       time: '07:00 PM',
-      location: 'Jakarta Barat',
-      venue: 'Central Park Dance Studio',
-      price: 60000,
+      location: 'Miami, FL',
+      venue: 'Wynwood Dance Studio',
+      price: 25,
       currentParticipants: 18,
       maxParticipants: 25,
       skillLevel: 'Beginner',
@@ -942,7 +942,7 @@ export class MockDataService {
       hostAvatar: '💃',
       description: 'High energy dance workout',
       image: '💃',
-      distance: '7.9 km'
+      distance: '4.9 mi'
     },
     {
       id: '51',
@@ -950,9 +950,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-24',
       time: '08:00 PM',
-      location: 'Jakarta Pusat',
-      venue: 'Urban Dance Studio',
-      price: 80000,
+      location: 'Los Angeles, CA',
+      venue: 'Hollywood Dance Studio',
+      price: 35,
       currentParticipants: 14,
       maxParticipants: 20,
       skillLevel: 'Intermediate',
@@ -960,7 +960,7 @@ export class MockDataService {
       hostAvatar: '🕺',
       description: 'Learn hip hop choreography',
       image: '💃',
-      distance: '5.1 km'
+      distance: '3.2 mi'
     },
 
     // CrossFit / HIIT
@@ -970,9 +970,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-20',
       time: '06:00 AM',
-      location: 'Jakarta Selatan',
-      venue: 'CrossFit Jakarta',
-      price: 100000,
+      location: 'Austin, TX',
+      venue: 'CrossFit South Austin',
+      price: 45,
       currentParticipants: 15,
       maxParticipants: 20,
       skillLevel: 'Advanced',
@@ -980,7 +980,7 @@ export class MockDataService {
       hostAvatar: '💪',
       description: 'Intense CrossFit WOD',
       image: '💪',
-      distance: '6.3 km'
+      distance: '3.9 mi'
     },
     {
       id: '53',
@@ -988,9 +988,9 @@ export class MockDataService {
       sport: 'Running',
       date: '2025-10-22',
       time: '06:30 PM',
-      location: 'Tangerang',
-      venue: 'Fitness First BSD',
-      price: 75000,
+      location: 'Boston, MA',
+      venue: 'Back Bay Fitness',
+      price: 35,
       currentParticipants: 12,
       maxParticipants: 18,
       skillLevel: 'Intermediate',
@@ -998,7 +998,7 @@ export class MockDataService {
       hostAvatar: '🏋️',
       description: '45-min high intensity workout',
       image: '💪',
-      distance: '11.8 km'
+      distance: '7.4 mi'
     }
   ];
 
@@ -1026,4 +1026,3 @@ export class MockDataService {
     return this.mockEvents.find(event => event.id === id);
   }
 }
-
