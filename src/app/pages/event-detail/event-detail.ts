@@ -5,10 +5,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MockDataService } from '../../services/mock-data.service';
 import { UserEventsService } from '../../services/user-events.service';
 import { Event } from '../../models/event.model';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { BarcodeFormat } from '@zxing/library';
 
 @Component({
   selector: 'app-event-detail',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ZXingScannerModule],
   templateUrl: './event-detail.html',
   styleUrl: './event-detail.css'
 })
@@ -17,7 +19,17 @@ export class EventDetail implements OnInit {
   showJoinModal: boolean = false;
   showPaymentModal: boolean = false;
   showSuccessModal: boolean = false;
+  showQRScannerModal: boolean = false;
+  showCheckInSuccessModal: boolean = false;
   hasJoined: boolean = false;
+  hasCheckedIn: boolean = false;
+  
+  // QR Scanner
+  availableDevices: MediaDeviceInfo[] = [];
+  currentDevice?: MediaDeviceInfo;
+  hasDevices: boolean = false;
+  hasPermission: boolean = false;
+  qrCodeFormat = BarcodeFormat.QR_CODE;
   
   // Payment form
   cardNumber: string = '';
@@ -195,5 +207,35 @@ export class EventDetail implements OnInit {
       month: 'long', 
       day: 'numeric' 
     });
+  }
+
+  // QR Scanner Methods
+  openQRScanner() {
+    this.showQRScannerModal = true;
+  }
+
+  closeQRScanner() {
+    this.showQRScannerModal = false;
+  }
+
+  onCamerasFound(devices: MediaDeviceInfo[]): void {
+    this.availableDevices = devices;
+    this.hasDevices = Boolean(devices && devices.length);
+  }
+
+  onCodeResult(resultString: string): void {
+    // Always treat as successful check-in (for demo)
+    this.hasCheckedIn = true;
+    this.showQRScannerModal = false;
+    this.showCheckInSuccessModal = true;
+
+    // Auto-close success modal after 2 seconds
+    setTimeout(() => {
+      this.showCheckInSuccessModal = false;
+    }, 2000);
+  }
+
+  onHasPermission(has: boolean): void {
+    this.hasPermission = has;
   }
 }
